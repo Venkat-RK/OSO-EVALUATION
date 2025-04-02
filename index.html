@@ -3,29 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Form to PDF</title>
+    <title>OSO General Speech Evaluation Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <h1>Simple Data Form</h1>
-        <p>Fill out the form below and click "Export as PDF" to download the data.</p>
+    <div class="container evaluation-container"> <!-- Added class for specific styling -->
+        <h1>OSO General Speech Evaluation Form</h1>
+        <p>Provide feedback for each category below.</p>
 
-        <form id="dataForm">
-            <div class="form-group">
-                <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName" name="fullName" required>
-            </div>
+        <form id="evaluationForm">
+            <table class="evaluation-table">
+                <thead>
+                    <tr>
+                        <th>Category & Help</th>
+                        <th>Pros</th>
+                        <th>Improvements</th>
+                        <th>Rating (1-10)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Row 1: Effectiveness -->
+                    <tr>
+                        <td class="category-cell">
+                            1. Effectiveness (Take away from the speech)
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-10 : Inspire Your Audience</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_1" aria-label="Pros for Effectiveness"></textarea></td>
+                        <td><textarea name="improvements_1" aria-label="Improvements for Effectiveness"></textarea></td>
+                        <td>
+                            <select name="rating_1" aria-label="Rating for Effectiveness">
+                                <option value="">--</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="form-group">
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                    <!-- Row 2: Vocal Variety -->
+                    <tr>
+                        <td class="category-cell">
+                            2. Vocal Variety
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-6 : Vocal Variety</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_2" aria-label="Pros for Vocal Variety"></textarea></td>
+                        <td><textarea name="improvements_2" aria-label="Improvements for Vocal Variety"></textarea></td>
+                        <td>
+                            <select name="rating_2" aria-label="Rating for Vocal Variety">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
 
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                    <!-- Row 3: Aligned/Advanced vocabulary -->
+                    <tr>
+                        <td class="category-cell">
+                            3. Aligned/Advanced vocabulary
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-4 : How to say it</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_3" aria-label="Pros for Vocabulary"></textarea></td>
+                        <td><textarea name="improvements_3" aria-label="Improvements for Vocabulary"></textarea></td>
+                        <td>
+                            <select name="rating_3" aria-label="Rating for Vocabulary">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                           </select>
+                        </td>
+                    </tr>
+
+                     <!-- Row 4: Love on Purpose (Assuming this means Passion/Purpose) -->
+                    <tr>
+                        <td class="category-cell">
+                            4. Passion / Purpose
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-3 : Get to the point</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_4" aria-label="Pros for Passion/Purpose"></textarea></td>
+                        <td><textarea name="improvements_4" aria-label="Improvements for Passion/Purpose"></textarea></td>
+                        <td>
+                            <select name="rating_4" aria-label="Rating for Passion/Purpose">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 5: Usage of Body language -->
+                     <tr>
+                        <td class="category-cell">
+                            5. Usage of Body language
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-5 : Your body speaks</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_5" aria-label="Pros for Body Language"></textarea></td>
+                        <td><textarea name="improvements_5" aria-label="Improvements for Body Language"></textarea></td>
+                        <td>
+                            <select name="rating_5" aria-label="Rating for Body Language">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 6: Awesome Quality (Assuming Content/Research Quality) -->
+                    <tr>
+                        <td class="category-cell">
+                            6. Content Quality / Research
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-7 : Research your topic</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_6" aria-label="Pros for Content Quality"></textarea></td>
+                        <td><textarea name="improvements_6" aria-label="Improvements for Content Quality"></textarea></td>
+                        <td>
+                            <select name="rating_6" aria-label="Rating for Content Quality">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 7: Tools Usage -->
+                    <tr>
+                        <td class="category-cell">
+                            7. Tools Usage (Visual Aids, etc.)
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-8 : Visual Aids</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_7" aria-label="Pros for Tools Usage"></textarea></td>
+                        <td><textarea name="improvements_7" aria-label="Improvements for Tools Usage"></textarea></td>
+                        <td>
+                            <select name="rating_7" aria-label="Rating for Tools Usage">
+                                <option value="">--</option>
+                               <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 8: Interactiveness -->
+                    <tr>
+                        <td class="category-cell">
+                            8. Interactiveness / Audience Engagement
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-9 : Persuade with power</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_8" aria-label="Pros for Interactiveness"></textarea></td>
+                        <td><textarea name="improvements_8" aria-label="Improvements for Interactiveness"></textarea></td>
+                        <td>
+                             <select name="rating_8" aria-label="Rating for Interactiveness">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <!-- Row 9: Organization of Speech -->
+                    <tr>
+                        <td class="category-cell">
+                            9. Organization of Speech
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-2 : Organize your speech</span>
+                            </span>
+                        </td>
+                        <td><textarea name="pros_9" aria-label="Pros for Organization"></textarea></td>
+                        <td><textarea name="improvements_9" aria-label="Improvements for Organization"></textarea></td>
+                        <td>
+                             <select name="rating_9" aria-label="Rating for Organization">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                     <!-- Row 10: Natural comfort & confidence levels -->
+                    <tr>
+                        <td class="category-cell">
+                            10. Natural comfort & confidence levels
+                            <span class="help-icon" tabindex="0">?
+                                <span class="tooltip-text">OSO Manual Ref: Project-1 : The Ice Breaker</span>
+                             </span>
+                        </td>
+                        <td><textarea name="pros_10" aria-label="Pros for Comfort/Confidence"></textarea></td>
+                        <td><textarea name="improvements_10" aria-label="Improvements for Comfort/Confidence"></textarea></td>
+                        <td>
+                             <select name="rating_10" aria-label="Rating for Comfort/Confidence">
+                                <option value="">--</option>
+                                <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+             <!-- Other Notes Section -->
+            <div class="form-group other-notes">
+                 <label for="otherNotes">11. Other notes:</label>
+                 <textarea id="otherNotes" name="otherNotes" rows="4"></textarea>
             </div>
 
             <button type="submit" id="exportPdfButton">Export as PDF</button>
@@ -34,7 +227,6 @@
 
     <!-- Include jsPDF library from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
     <!-- Include your custom script -->
     <script src="script.js"></script>
 </body>
